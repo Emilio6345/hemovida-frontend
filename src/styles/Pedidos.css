@@ -1,0 +1,395 @@
+/* ======================================
+   CONTENEDOR
+====================================== */
+
+.view-container{
+    max-width:1400px;
+    margin:auto;
+    padding:0 30px 40px;
+}
+
+/* ======================================
+   HERO / BANNER
+====================================== */
+
+.orders-hero{
+    background:linear-gradient(
+        135deg,
+        #071a3d,
+        #123d68
+    );
+
+    color:white;
+
+    padding:60px 70px;
+
+    margin-bottom:35px;
+
+    border-radius:0 0 24px 24px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.orders-hero-left{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.orders-icon{
+    width:80px;
+    height:80px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.12);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:36px;
+}
+
+.orders-hero h1{
+    font-size:3rem;
+    margin:0;
+    font-weight:800;
+}
+
+.orders-hero p{
+    margin-top:10px;
+    opacity:.9;
+    font-size:1rem;
+}
+
+.btn-refresh{
+    border:none;
+    background:white;
+    color:#123d68;
+
+    padding:14px 24px;
+
+    border-radius:14px;
+
+    cursor:pointer;
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.btn-refresh:hover{
+    transform:translateY(-2px);
+}
+
+/* ======================================
+   STATS
+====================================== */
+
+.orders-stats{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+
+    margin-bottom:35px;
+}
+
+.stat-card{
+    background:white;
+
+    padding:24px;
+
+    border-radius:20px;
+
+    display:flex;
+    align-items:center;
+    gap:18px;
+
+    border:1px solid #e8edf5;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.05);
+
+    transition:.3s;
+}
+
+.stat-card:hover{
+    transform:translateY(-4px);
+}
+
+.stat-icon{
+    width:65px;
+    height:65px;
+
+    border-radius:18px;
+
+    background:
+    linear-gradient(
+      135deg,
+      #eef2ff,
+      #dbeafe
+    );
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:28px;
+}
+
+.stat-card h3{
+    margin:0;
+    font-size:2rem;
+    color:#2563eb;
+}
+
+.stat-card span{
+    color:#64748b;
+    font-weight:600;
+}
+
+/* ======================================
+   TABLA
+====================================== */
+
+.table-card{
+    background:white;
+
+    border-radius:24px;
+
+    padding:25px;
+
+    border:1px solid #e8edf5;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.06);
+}
+
+.table-responsive{
+    overflow-x:auto;
+}
+
+.saas-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.saas-table thead{
+    background:#f8fafc;
+}
+
+.saas-table th{
+    padding:20px;
+    color:#64748b;
+    font-weight:700;
+    text-align:left;
+}
+
+.saas-table td{
+    padding:20px;
+    border-top:1px solid #eef2f7;
+}
+
+.saas-table tbody tr{
+    transition:.25s;
+}
+
+.saas-table tbody tr:hover{
+    background:#fafcff;
+}
+
+.order-id{
+    font-weight:800;
+    color:#0f172a;
+}
+
+.amount{
+    color:#00a8e8;
+    font-weight:800;
+    font-size:1rem;
+}
+
+/* ======================================
+   FECHA
+====================================== */
+
+.fecha-cell{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+}
+
+.fecha-cell strong{
+    font-weight:700;
+}
+
+.fecha-cell span{
+    font-size:.85rem;
+    color:#64748b;
+}
+
+/* ======================================
+   BADGES
+====================================== */
+
+.badge-status{
+    padding:10px 16px;
+    border-radius:999px;
+    font-weight:700;
+    font-size:.9rem;
+}
+
+.status-completed{
+    background:#dcfce7;
+    color:#16a34a;
+}
+
+.status-processing{
+    background:#dbeafe;
+    color:#2563eb;
+}
+
+.status-cancelled{
+    background:#fee2e2;
+    color:#dc2626;
+}
+
+.status-default{
+    background:#f1f5f9;
+    color:#475569;
+}
+
+/* ======================================
+   BOTONES ACCION
+====================================== */
+
+.action-buttons{
+    display:flex;
+    gap:10px;
+}
+
+.btn-action-view,
+.btn-action-delete{
+    width:42px;
+    height:42px;
+
+    border:none;
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.btn-action-view{
+    background:#ecfeff;
+}
+
+.btn-action-view:hover{
+    background:#cffafe;
+    transform:scale(1.05);
+}
+
+.btn-action-delete{
+    background:#fee2e2;
+}
+
+.btn-action-delete:hover{
+    background:#fecaca;
+    transform:scale(1.05);
+}
+
+/* ======================================
+   EMPTY STATE
+====================================== */
+
+.empty-state{
+    text-align:center;
+    padding:70px 20px;
+}
+
+.empty-icon{
+    font-size:4rem;
+}
+
+.empty-state h3{
+    margin-top:15px;
+}
+
+.btn-primary{
+    margin-top:20px;
+
+    border:none;
+
+    padding:14px 24px;
+
+    border-radius:14px;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-weight:700;
+
+    background:
+    linear-gradient(
+      135deg,
+      #0ea5e9,
+      #2563eb
+    );
+}
+
+/* ======================================
+   LOADER
+====================================== */
+
+.table-loader{
+    text-align:center;
+    padding:60px;
+}
+
+.spinner{
+    width:50px;
+    height:50px;
+
+    border:4px solid #e5e7eb;
+    border-top:4px solid #2563eb;
+
+    border-radius:50%;
+
+    margin:auto;
+
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+/* ======================================
+   RESPONSIVE
+====================================== */
+
+@media(max-width:900px){
+
+    .orders-hero{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:20px;
+        padding:40px;
+    }
+
+    .orders-hero h1{
+        font-size:2rem;
+    }
+
+    .orders-stats{
+        grid-template-columns:1fr;
+    }
+}

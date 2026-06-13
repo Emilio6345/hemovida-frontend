@@ -1,0 +1,1372 @@
+/* ============================================================
+   HEMOVIDA PREMIUM HOME STYLES
+   ============================================================ */
+
+:root {
+  --clinica-turquesa: #10c7c4;
+  --clinica-azul: #2441b8;
+  --clinica-morado: #6844c5;
+  --clinica-gradient: linear-gradient(135deg, var(--clinica-azul), var(--clinica-morado));
+  --clinica-gradient-alt: linear-gradient(90deg, var(--clinica-turquesa), var(--clinica-azul));
+  --text-dark: #1e293b;
+  --text-light: #64748b;
+  --bg-soft: #f8fafc;
+  --white: #ffffff;
+  --shadow-premium: 0 20px 40px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 30px 60px rgba(0, 0, 0, 0.1);
+  --radius-premium: 24px;
+  --transition-premium: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.home-premium-container {
+  overflow-x: hidden;
+  background-color: var(--white);
+  color: var(--text-dark);
+  margin-top: -2.5rem; /* Offset MainLayout padding */
+}
+
+/* Reusable Components */
+.section-header {
+  text-align: center;
+  margin-bottom: clamp(40px, 8vw, 80px);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-header h2 {
+  font-size: clamp(34px, 5vw, 52px);
+
+  font-weight: 800;
+
+  color: #0f172a;
+
+  margin-bottom: 16px;
+
+  line-height: 1.15;
+
+  letter-spacing: -1px;
+}
+
+.section-header p {
+  font-size: 1.15rem;
+
+  color: #64748b;
+
+  line-height: 1.8;
+
+  max-width: 700px;
+
+  margin: 0 auto;
+}
+
+/* Breakout Utility for Full-Width Sections */
+.premium-section {
+  padding: clamp(60px, 10vw, 120px) 0;
+
+  width: 100vw;
+
+  position: relative;
+
+  left: 50%;
+  right: 50%;
+
+  margin-left: -50vw;
+  margin-right: -50vw;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f8fbff 0%,
+      #eef6ff 35%,
+      #f5f2ff 100%
+    );
+}
+
+/* Glow morado */
+
+.premium-section::before {
+  content: "";
+
+  position: absolute;
+
+  top: -250px;
+  right: -180px;
+
+  width: 550px;
+  height: 550px;
+
+  border-radius: 50%;
+
+  background: rgba(104, 68, 197, 0.08);
+
+  filter: blur(120px);
+
+  pointer-events: none;
+}
+
+/* Glow turquesa */
+
+.premium-section::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: -250px;
+  left: -180px;
+
+  width: 550px;
+  height: 550px;
+
+  border-radius: 50%;
+
+  background: rgba(16, 199, 196, 0.08);
+
+  filter: blur(120px);
+
+  pointer-events: none;
+}
+
+.container-premium {
+  width: 100%;
+  max-width: none;
+  padding: 0 60px;
+  position: relative;
+  z-index: 2;
+}
+/* HERO SECTION */
+.medical-hero-premium {
+  position: relative;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      #07132d 0%,
+      #07132d 45%,
+      rgba(7,19,45,0.92) 55%,
+      rgba(7,19,45,0.65) 65%,
+      rgba(7,19,45,0.15) 80%,
+      transparent 100%
+    );
+
+  border-radius: 32px;
+
+  display: flex;
+  align-items: center;
+
+  min-height: 520px;
+
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.hero-content-premium {
+  width: 50%;
+  padding: 3rem;
+  z-index: 2;
+}
+
+.hero-content-premium h1 {
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.hero-content-premium .highlight{
+  color:#10c7c4;
+  background:none;
+}
+
+.hero-content-premium p {
+  color: rgba(255,255,255,0.9);
+  font-size: 1.3rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.hero-image-premium {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 60%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  z-index: 0;
+
+  opacity: 0.75;
+}
+
+.medical-hero-premium::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      #07132d 0%,
+      #07132d 40%,
+      rgba(7,19,45,0.95) 55%,
+      rgba(7,19,45,0.7) 65%,
+      rgba(7,19,45,0.25) 80%,
+      transparent 100%
+    );
+
+  z-index: 1;
+}
+
+/* SECTION 1: Why Hemovida? */
+.why-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(320px, 1fr));
+
+  gap: 2rem;
+}
+
+.why-card {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 3rem 2rem;
+
+  border-radius: 24px;
+
+  text-align: center;
+
+  background: rgba(255,255,255,.85);
+
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255,255,255,.7);
+
+  transition: all .35s ease;
+
+  box-shadow:
+    0 10px 30px rgba(15,23,42,.05);
+}
+
+/* Barra superior premium */
+
+.why-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 5px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--clinica-turquesa),
+      var(--clinica-azul),
+      var(--clinica-morado)
+    );
+
+  transform: scaleX(0);
+
+  transform-origin: left;
+
+  transition: .35s ease;
+}
+
+.why-card:hover::before {
+  transform: scaleX(1);
+}
+
+.why-card:hover {
+  transform: translateY(-12px);
+
+  box-shadow:
+    0 25px 50px rgba(15,23,42,.12);
+
+  border-color:
+    rgba(16,199,196,.2);
+}
+
+.why-icon-wrapper {
+  width: 90px;
+  height: 90px;
+
+  margin: 0 auto 2rem;
+
+  border-radius: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--clinica-turquesa),
+      var(--clinica-azul)
+    );
+
+  color: white;
+
+  transition: all .35s ease;
+
+  box-shadow:
+    0 15px 35px rgba(36,65,184,.25);
+}
+
+.why-card:hover .why-icon-wrapper {
+  transform:
+    translateY(-8px)
+    scale(1.08)
+    rotate(8deg);
+
+  box-shadow:
+    0 20px 40px rgba(36,65,184,.35);
+}
+
+.why-card h3 {
+  font-size: 1.45rem;
+
+  font-weight: 800;
+
+  color: #0f172a;
+
+  margin-bottom: 1rem;
+}
+
+.why-card p {
+  color: #64748b;
+
+  font-size: 1rem;
+
+  line-height: 1.8;
+
+  max-width: 320px;
+
+  margin: 0 auto;
+}
+/* ==========================================================
+   SECTION 2 - ESPECIALIDADES PREMIUM
+   ========================================================== */
+
+.specialties-slider::-webkit-scrollbar{
+  display:none;
+}
+
+.slider-btn{
+  width:60px;
+  height:60px;
+
+  border:none;
+  border-radius:50%;
+
+  cursor:pointer;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:24px;
+  font-weight:700;
+
+  color:white;
+
+  background:
+  linear-gradient(
+    135deg,
+    var(--clinica-azul),
+    var(--clinica-morado)
+  );
+
+  box-shadow:
+  0 15px 35px rgba(36,65,184,.25);
+
+  transition:.35s ease;
+}
+
+.slider-btn:hover{
+  transform:translateY(-6px);
+  box-shadow:
+  0 20px 45px rgba(104,68,197,.35);
+}
+
+/* CONTENEDOR DEL SLIDER */
+
+.specialties-slider{
+  display:flex;
+
+  gap:40px;
+
+  overflow-x:auto;
+  overflow-y:hidden;
+
+  scroll-behavior:smooth;
+
+  padding:20px 5px;
+
+  scrollbar-width:none;
+}
+
+.specialties-slider::-webkit-scrollbar{
+  display:none;
+}
+
+/* TARJETA */
+
+.specialty-slide{
+  flex:0 0 520px;
+
+  height:620px;
+
+  border-radius:32px;
+
+  overflow:hidden;
+
+  position:relative;
+
+  cursor:pointer;
+
+  transition:.45s ease;
+
+  box-shadow:
+  0 20px 50px rgba(0,0,0,.12);
+}
+
+.specialty-slide:hover{
+  transform:translateY(-12px);
+}
+
+.specialty-slide-image{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  transition:.6s ease;
+}
+
+.specialty-slide:hover .specialty-slide-image{
+  transform:scale(1.08);
+}
+
+/* OVERLAY */
+
+.specialty-slide-overlay{
+  position:absolute;
+  inset:0;
+
+  background:
+  linear-gradient(
+    to top,
+    rgba(15,23,42,.96) 5%,
+    rgba(15,23,42,.65) 35%,
+    transparent 75%
+  );
+
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+
+  padding:40px;
+}
+
+.specialty-slide-overlay h3{
+  color:white;
+
+  font-size:38px;
+
+  font-weight:800;
+
+  margin-bottom:12px;
+}
+
+.specialty-slide-overlay p{
+  color:rgba(255,255,255,.88);
+
+  font-size:17px;
+
+  line-height:1.7;
+
+  margin-bottom:24px;
+
+  max-width:90%;
+}
+
+/* BOTON */
+
+.specialty-slide-btn{
+  width:fit-content;
+
+  padding:16px 28px;
+
+  border:none;
+
+  border-radius:16px;
+
+  background:
+  rgba(255,255,255,.15);
+
+  backdrop-filter:blur(15px);
+
+  color:white;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.3s ease;
+}
+
+.specialty-slide-btn:hover{
+  background:var(--clinica-turquesa);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+  .specialties-header{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .specialty-slide{
+    flex:0 0 85vw;
+    height:500px;
+  }
+
+  .specialty-slide-overlay h3{
+    font-size:28px;
+  }
+
+}
+
+/* ==========================================
+   SECTION 3 - EXPERIENCIA HEMOVIDA
+========================================== */
+
+.hemovida-experience{
+  padding:120px 60px;
+  background:white;
+  overflow:hidden;
+}
+
+.experience-content{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:80px;
+}
+
+.experience-left{
+  max-width:600px;
+}
+
+.experience-tag{
+  display:inline-block;
+
+  color:var(--clinica-morado);
+
+  font-weight:700;
+
+  letter-spacing:2px;
+
+  margin-bottom:20px;
+
+  text-transform:uppercase;
+}
+
+.experience-left h2{
+  font-size:clamp(3rem,5vw,5rem);
+
+  line-height:1.05;
+
+  margin-bottom:30px;
+
+  font-weight:300;
+
+  color:#111827;
+}
+
+.experience-left h2 span{
+  display:block;
+
+  font-weight:800;
+
+  color:var(--clinica-azul);
+}
+
+.experience-left p{
+  font-size:1.3rem;
+
+  line-height:1.8;
+
+  color:#64748b;
+
+  margin-bottom:40px;
+}
+
+.experience-btn{
+  border:none;
+
+  cursor:pointer;
+
+  padding:18px 38px;
+
+  border-radius:999px;
+
+  color:white;
+
+  font-size:18px;
+
+  font-weight:700;
+
+  background:
+  linear-gradient(
+    135deg,
+    var(--clinica-morado),
+    var(--clinica-azul)
+  );
+
+  transition:.4s;
+}
+
+.experience-btn:hover{
+  transform:translateY(-5px);
+}
+
+.experience-right{
+  position:relative;
+
+  height:700px;
+}
+
+.circle{
+  position:absolute;
+
+  overflow:hidden;
+
+  border-radius:50%;
+
+  box-shadow:
+  0 25px 60px rgba(0,0,0,.12);
+}
+
+.circle img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.circle-big{
+  width:430px;
+  height:430px;
+
+  top:-110px;
+  right:-40px;
+}
+
+.circle-medium{
+  width:320px;
+  height:320px;
+
+  left:-150px;
+  top:180px;
+}
+
+.circle-small{
+  width:280px;
+  height:280px;
+
+  bottom:-50px;
+  right:300px;
+}
+
+/* ECG BACKGROUND */
+
+.ecg-background{
+  position:absolute;
+
+  inset:0;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  z-index:0;
+
+  opacity:.18;
+
+  pointer-events:none;
+}
+
+.ecg-background svg{
+  width:900px;
+  height:auto;
+}
+
+.circle{
+  z-index:2;
+}
+
+.ecg-background{
+  animation: ecgFloat 3s ease-in-out infinite;
+}
+
+@keyframes ecgFloat{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-12px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+
+}
+
+
+
+/* SECTION 3: Services */
+.services-bg {
+  background-color: #f8fafc;
+}
+
+.services-grid-premium {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.service-item-premium {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 20px;
+  transition: var(--transition-premium);
+  border: 1px solid transparent;
+}
+
+.service-item-premium:hover {
+  border-color: var(--clinica-azul);
+  box-shadow: var(--shadow-premium);
+  transform: translateX(10px);
+}
+
+.service-icon-small {
+  min-width: 60px;
+  height: 60px;
+  background: #eff6ff;
+  color: var(--clinica-azul);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.service-item-premium h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+@media(max-width:992px){
+
+  .experience-content{
+    grid-template-columns:1fr;
+  }
+
+  .experience-right{
+    height:550px;
+  }
+
+  .circle-big{
+    width:280px;
+    height:280px;
+  }
+
+  .circle-medium{
+    width:220px;
+    height:220px;
+  }
+
+  .circle-small{
+    width:180px;
+    height:180px;
+  }
+
+  .experience-left h2{
+    font-size:3rem;
+  }
+
+}
+/* SECTION 4: Doctors */
+.doctors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+}
+
+.doctor-card-premium {
+  background: white;
+  border-radius: var(--radius-premium);
+  overflow: hidden;
+  transition: var(--transition-premium);
+  border: 1px solid #f1f5f9;
+}
+
+.doctor-card-premium:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-premium);
+}
+
+.doc-image-wrapper {
+  height: 350px;
+  background: #f1f5f9;
+  overflow: hidden;
+  position: relative;
+}
+
+.doc-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+  
+
+.doctor-card-premium:hover .doc-image-wrapper img {
+  transform: scale(1.05);
+}
+
+.doc-info {
+  padding: 2rem;
+  text-align: center;
+}
+
+.doc-info h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.doc-spec {
+  color: var(--clinica-turquesa);
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.doc-exp {
+  color: var(--text-light);
+  font-size: 15px;
+  margin-bottom: 1.5rem;
+}
+
+.btn-profile {
+  display: block;
+  padding: 12px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  color: var(--text-dark);
+  font-weight: 600;
+  transition: var(--transition-premium);
+}
+
+.btn-profile:hover {
+  background: var(--clinica-azul);
+  color: white;
+  border-color: var(--clinica-azul);
+}
+
+/* SECTION 5: Testimonials */
+.testimonials-section {
+  background: var(--clinica-azul);
+  color: white;
+}
+
+.testimonials-section .section-header h2 {
+  color: white;
+}
+
+.testimonials-section .section-header p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2.5rem;
+}
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 3rem;
+  border-radius: var(--radius-premium);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.testimonial-text {
+  font-size: 18px;
+  line-height: 1.8;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.testimonial-user {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.user-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--clinica-turquesa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.user-info h4 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.rating {
+  color: #fbbf24;
+  margin-top: 5px;
+}
+
+/* SECTION 6: News */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2.5rem;
+}
+
+.news-card {
+  background: white;
+  border-radius: var(--radius-premium);
+  overflow: hidden;
+  border: 1px solid #f1f5f9;
+  transition: var(--transition-premium);
+}
+
+.news-card:hover {
+  box-shadow: var(--shadow-premium);
+}
+
+.news-image {
+  height: 240px;
+  background: #f1f5f9;
+}
+
+.news-content {
+  padding: 2rem;
+}
+
+.news-tag {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #f0f9ff;
+  color: #0369a1;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.news-content h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.news-link {
+  color: var(--clinica-azul);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 1.5rem;
+}
+
+/* SECTION 7: CTA */
+.cta-premium {
+  padding: 0 0 100px 0;
+}
+
+.cta-box {
+  background: var(--clinica-gradient);
+  border-radius: 40px;
+  padding: clamp(60px, 8vw, 100px);
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-box::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.cta-box h2 {
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+
+.cta-box p {
+  font-size: clamp(18px, 2vw, 24px);
+  opacity: 0.9;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-cta-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 28px;
+
+  border-radius: 12px;
+
+  background: linear-gradient(
+    90deg,
+    #11c5d9,
+    #1d9bf0
+  );
+
+  color: white;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: all .3s ease;
+}
+
+.btn-cta-primary:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(16, 199, 196, 0.5);
+  background: #0ea5a2;
+}
+
+.btn-cta-secondary {
+  padding: 18px 40px;
+  background: white;
+  color: var(--clinica-azul);
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: 700;
+  transition: var(--transition-premium);
+}
+
+.btn-cta-secondary:hover {
+  transform: translateY(-5px);
+  background: #f1f5f9;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+
+  .medical-hero-premium{
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .hero-content-premium{
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .hero-image-premium{
+    width: 100%;
+    height: 260px;
+  }
+
+  .medical-hero-premium::after{
+    display:none;
+  }
+
+  .hero-content-premium h1{
+    font-size: 2.5rem;
+  }
+
+}
+
+.specialties-slider {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 20px;
+}
+
+.specialties-slider::-webkit-scrollbar {
+  height: 8px;
+}
+
+.specialties-slider::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    90deg,
+    var(--clinica-turquesa),
+    var(--clinica-azul),
+    var(--clinica-morado)
+  );
+  border-radius: 999px;
+}
+
+.specialty-slide {
+  min-width: 520px;
+  height: 520px;
+  border-radius: 28px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all .4s ease;
+}
+
+.specialty-slide:hover {
+  transform: translateY(-12px);
+}
+
+.specialty-slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all .5s ease;
+}
+
+.specialty-slide:hover .specialty-slide-image {
+  transform: scale(1.08);
+}
+
+.specialty-slide-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(15,23,42,.95),
+      rgba(15,23,42,.5),
+      transparent
+    );
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding: 35px;
+}
+
+.specialty-slide-overlay h3 {
+  color: white;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.specialty-slide-overlay p {
+  color: rgba(255,255,255,.85);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.specialty-slide-btn {
+  width: fit-content;
+
+  background: rgba(255,255,255,.15);
+
+  backdrop-filter: blur(15px);
+
+  color: white;
+
+  padding: 14px 24px;
+
+  border-radius: 14px;
+
+  transition: .3s;
+}
+
+.specialty-slide-btn:hover {
+  background: var(--clinica-turquesa);
+}
+
+.specialties-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:30px;
+}
+
+.slider-controls{
+  display:flex;
+  gap:12px;
+}
+
+.slider-btn{
+  width:56px;
+  height:56px;
+
+  border:none;
+
+  border-radius:50%;
+
+  cursor:pointer;
+
+  font-size:24px;
+  font-weight:700;
+
+  color:white;
+
+  background:
+  linear-gradient(
+    135deg,
+    var(--clinica-azul),
+    var(--clinica-morado)
+  );
+
+  transition:.3s;
+}
+
+.slider-btn:hover{
+  transform:translateY(-4px);
+}
+
+.specialties-slider{
+  scrollbar-width:none;
+}
+
+.specialties-slider::-webkit-scrollbar{
+  display:none;
+}
+
+/* =========================
+   VOZANDES STYLE NAVIGATION
+   ========================= */
+
+.specialties-navigation{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:30px;
+
+  margin-top:50px;
+}
+
+.slider-progress{
+  width:650px;
+  height:16px;
+
+  background:#dfe5ee;
+
+  border-radius:999px;
+
+  overflow:hidden;
+}
+
+.slider-progress-fill{
+  width:80px;
+  height:100%;
+
+  background:linear-gradient(
+    90deg,
+    var(--clinica-morado),
+    var(--clinica-turquesa)
+  );
+
+  border-radius:999px;
+
+  transition:.4s ease;
+}
+
+.slider-btn{
+  width:64px;
+  height:64px;
+
+  border:none;
+
+  border-radius:50%;
+
+  cursor:pointer;
+
+  font-size:28px;
+
+  color:white;
+
+  background:linear-gradient(
+    135deg,
+    var(--clinica-morado),
+    var(--clinica-azul)
+  );
+
+  transition:.35s;
+}
+
+.slider-btn:hover{
+  transform:translateY(-5px) scale(1.05);
+}
+
+@media(max-width:768px){
+
+  .slider-progress{
+    width:180px;
+  }
+
+  .slider-btn{
+    width:52px;
+    height:52px;
+  }
+
+}

@@ -1,0 +1,208 @@
+/* ===================================
+   ADMIN PRODUCTOS
+=================================== */
+
+.admin-container{
+  max-width:1400px;
+  margin:auto;
+  padding:40px 30px;
+}
+
+.admin-header{
+  margin-bottom:30px;
+}
+
+.admin-header h1{
+  font-size:2.5rem;
+  font-weight:800;
+  color:#0f172a;
+  margin-bottom:10px;
+}
+
+.admin-header p{
+  color:#64748b;
+  font-size:1rem;
+}
+
+.admin-form-card,
+.admin-table-card{
+  background:white;
+  border-radius:24px;
+  padding:30px;
+  margin-bottom:30px;
+
+  border:1px solid #e5e7eb;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,.05);
+}
+
+.admin-form-card h2,
+.admin-table-card h2{
+  margin-bottom:25px;
+  font-size:1.5rem;
+  color:#0f172a;
+}
+
+.form-grid{
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(220px,1fr));
+
+  gap:15px;
+}
+
+.form-grid input,
+.form-grid select{
+  width:100%;
+  padding:14px;
+
+  border:1px solid #d1d5db;
+
+  border-radius:12px;
+
+  font-size:15px;
+
+  transition:.3s;
+}
+
+.form-grid input:focus,
+.form-grid select:focus{
+  outline:none;
+  border-color:#0ea5e9;
+
+  box-shadow:
+  0 0 0 4px rgba(14,165,233,.15);
+}
+
+.admin-buttons{
+  display:flex;
+  gap:12px;
+  margin-top:25px;
+}
+
+.btn-guardar{
+  border:none;
+  cursor:pointer;
+
+  padding:14px 25px;
+
+  border-radius:12px;
+
+  color:white;
+
+  font-weight:700;
+
+  background:
+  linear-gradient(
+    135deg,
+    #0ea5e9,
+    #2563eb
+  );
+}
+
+.btn-guardar:hover{
+  transform:translateY(-2px);
+}
+
+.btn-cancelar{
+  border:none;
+  cursor:pointer;
+
+  padding:14px 25px;
+
+  border-radius:12px;
+
+  background:#e5e7eb;
+}
+
+.btn-cancelar:hover{
+  background:#d1d5db;
+}
+
+/* ======================
+   TABLA
+====================== */
+
+.admin-table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+.admin-table thead{
+  background:#f8fafc;
+}
+
+.admin-table th{
+  text-align:left;
+  padding:15px;
+  color:#334155;
+  font-weight:700;
+}
+
+.admin-table td{
+  padding:15px;
+  border-top:1px solid #e5e7eb;
+}
+
+.admin-table tr:hover{
+  background:#f8fafc;
+}
+
+/* ======================
+   BOTONES TABLA
+====================== */
+
+.btn-editar{
+  border:none;
+  cursor:pointer;
+
+  padding:10px 15px;
+
+  border-radius:10px;
+
+  color:white;
+
+  background:#f59e0b;
+
+  margin-right:10px;
+}
+
+.btn-editar:hover{
+  opacity:.9;
+}
+
+.btn-eliminar{
+  border:none;
+  cursor:pointer;
+
+  padding:10px 15px;
+
+  border-radius:10px;
+
+  color:white;
+
+  background:#dc2626;
+}
+
+.btn-eliminar:hover{
+  opacity:.9;
+}
+
+/* ======================
+   RESPONSIVE
+====================== */
+
+@media(max-width:900px){
+
+  .admin-table{
+    display:block;
+    overflow-x:auto;
+  }
+
+  .admin-header h1{
+    font-size:2rem;
+  }
+
+}

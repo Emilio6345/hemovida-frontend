@@ -1,0 +1,125 @@
+.service-detail-container{
+  max-width:1200px;
+  margin:auto;
+  padding:30px;
+}
+
+.back-btn{
+  border:none;
+  background:none;
+  cursor:pointer;
+  font-size:16px;
+  margin-bottom:25px;
+  color:#64748b;
+}
+
+.service-detail-top{
+  display:flex;
+  gap:40px;
+  align-items:flex-start;
+}
+
+.service-image-box{
+  flex:2;
+}
+
+.service-image-box img{
+  width:100%;
+  height:500px;
+  object-fit:cover;
+  border-radius:20px;
+}
+
+.service-price-box{
+  flex:1;
+  background:white;
+  border-radius:20px;
+  padding:30px;
+  box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.service-price-box p{
+  color:#94a3b8;
+  text-align:center;
+}
+
+.service-price-box h1{
+  text-align:center;
+  color:#0ea5e9;
+  font-size:48px;
+  margin-bottom:25px;
+}
+
+.btn-comprar{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:14px;
+  cursor:pointer;
+  font-size:16px;
+  font-weight:600;
+  color:white;
+  margin-bottom:12px;
+
+  background:linear-gradient(
+    90deg,
+    #0ea5e9,
+    #6366f1
+  );
+}
+
+.btn-carrito{
+  width:100%;
+  padding:14px;
+  border-radius:14px;
+  border:1px solid #0ea5e9;
+  background:white;
+  color:#0ea5e9;
+  cursor:pointer;
+  font-size:16px;
+  font-weight:600;
+}
+
+.service-price-box ul{
+  list-style:none;
+  padding:0;
+  margin-top:20px;
+}
+
+.service-price-box li{
+  margin-bottom:12px;
+  color:#64748b;
+}
+
+.service-description-box{
+  margin-top:30px;
+  background:white;
+  padding:35px;
+  border-radius:20px;
+  box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.service-description-box h1{
+  margin-bottom:20px;
+}
+
+.service-description-box p{
+  line-height:1.8;
+  color:#475569;
+}
+
+.benefits-grid{
+  margin-top:20px;
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(2,1fr);
+
+  gap:20px;
+}
+
+.benefits-grid div{
+  color:#334155;
+  font-weight:500;
+}

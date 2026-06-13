@@ -1,0 +1,597 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  margin:0;
+  padding:0;
+}
+
+/* ==========================
+   PANTALLA COMPLETA
+========================== */
+
+.login-page{
+  width:100%;
+  min-height:100vh;
+
+  background-size:98%;
+  background-position:center;
+  background-repeat:no-repeat;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  position:relative;
+  overflow:hidden;
+}
+
+
+/* ==========================
+   LOGO SUPERIOR
+========================== */
+
+.top-logo{
+  position:absolute;
+
+  top:-50px;
+  left:-50px;
+
+  z-index:2;
+}
+
+.top-logo img{
+  width:clamp(220px,18vw,380px);
+  object-fit:contain;
+}
+
+/* ==========================
+   TARJETA CENTRAL
+========================== */
+
+.login-card-v2{
+  position:relative;
+  z-index:10;
+
+  width:min(1200px,92vw);
+  min-height:700px;
+
+  background:white;
+  border-radius:35px;
+  overflow:hidden;
+
+  display:flex;
+
+  box-shadow:0 25px 50px rgba(0,0,0,.15);
+}
+/* ==========================
+   PANEL IZQUIERDO
+========================== */
+
+.login-left{
+  width:52%;
+   padding:clamp(35px,4vw,70px);
+
+  background:white;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+
+  position:relative;
+}
+
+.login-left > *{
+  position:relative;
+  z-index:2;
+}
+
+.login-left::after{
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  right:+80px;
+
+  width:220px;
+  height:100%;
+
+  background:white;
+
+  transform:skewX(-10deg);
+
+  z-index:1;
+}
+/* ==========================
+   TITULO
+========================== */
+.login-header-v2{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.login-header-v2 h1{
+  font-size:clamp(38px,4vw,56px);
+  font-weight:700;
+  margin-bottom:10px;
+
+  background:linear-gradient(
+    90deg,
+    #10c7c4,
+    #6d4fd6
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.login-header-v2 p{
+  font-size:clamp(16px,1.5vw,22px);
+  color:#7b8794;
+}
+
+.input-box input{
+  height:60px;
+  font-size:16px;
+}
+
+.btn-login-v2{
+  height:60px;
+  font-size:20px;
+}
+
+.authorized-card{
+  height:60px;
+  font-size:16px;
+}
+/* ==========================
+   FORM
+========================== */
+
+.login-form-v2{
+  width:100%;
+  max-width:520px;
+  margin:0 auto;
+
+  display:flex;
+  flex-direction:column;
+}
+
+/* ==========================
+   INPUTS
+========================== */
+
+.input-box{
+  position:relative;
+  margin-bottom:25px;
+}
+
+.input-box input{
+  width:100%;
+  height:72px;
+
+  border:2px solid #e5e7eb;
+
+  border-radius:14px;
+
+  padding-left:65px;
+
+  font-size:18px;
+
+  outline:none;
+
+  transition:.3s;
+}
+
+.input-box input:focus{
+  border-color:#00bcd4;
+}
+
+.icon{
+  position:absolute;
+  left:22px;
+  top:50%;
+  transform:translateY(-50%);
+
+  font-size:22px;
+
+  color:#0bb8a9;
+
+  display:flex;
+  align-items:center;
+}
+.eye-btn{
+  position:absolute;
+
+  right:20px;
+  top:50%;
+
+  transform:translateY(-50%);
+
+  border:none;
+  background:none;
+
+  cursor:pointer;
+
+  font-size:20px;
+
+  color:#94a3b8;
+}
+
+/* ==========================
+   FORGOT
+========================== */
+
+.forgot-row{
+  width:100%;
+  display:flex;
+  justify-content:flex-end;
+  margin-top:-5px;
+  margin-bottom:25px;
+}
+
+.forgot-row a{
+  color:#8b5cf6;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* ==========================
+   BOTON LOGIN
+========================== */
+
+.btn-login-v2{
+  width:100%;
+  height:70px;
+
+  border:none;
+
+  border-radius:14px;
+
+  cursor:pointer;
+
+  font-size:24px;
+  font-weight:700;
+
+  color:white;
+
+  background:
+  linear-gradient(
+  90deg,
+  #08a7c8,
+  #0bb8a9
+  );
+
+  transition:.3s;
+}
+
+.btn-login-v2:hover{
+  transform:translateY(-2px);
+}
+
+/* ==========================
+   SEPARADOR
+========================== */
+
+.separator{
+  display:flex;
+  align-items:center;
+
+  margin:40px 0;
+}
+
+.separator span{
+  flex:1;
+  height:1px;
+  background:#dbe2ea;
+}
+
+.separator p{
+  margin:0 20px;
+  color:#64748b;
+}
+
+/* ==========================
+   CARD AUTORIZADO
+========================== */
+.authorized-card{
+  height:70px;
+
+  border:2px solid #e5e7eb;
+
+  border-radius:14px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+
+  font-size:18px;
+  font-weight:600;
+
+  color:#3257d7;
+
+  background:white;
+}
+
+/* ==========================
+   TEXTO INFERIOR
+========================== */
+
+.secure-text{
+  text-align:center;
+
+  margin-top:70px;
+
+  color:#94a3b8;
+
+  font-size:15px;
+}
+
+/* ==========================
+   PANEL DERECHO
+========================== */
+
+.login-right{
+  width:48%;
+  position:relative;
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      rgba(255,255,255,.25),
+      rgba(255,255,255,.25)
+    ),
+    url('/images/hospital-bg.png');
+
+  background-size:2179px;
+  background-position-x: 1050px;
+background-position-y: -388px;
+}
+
+/* ==========================
+   IDIOMA
+========================== */
+
+.language-selector{
+  position:absolute;
+
+  top:25px;
+  right:25px;
+
+  background:white;
+
+  padding:14px 22px;
+
+  border-radius:18px;
+
+  font-weight:600;
+
+  color:#4f46e5;
+
+  box-shadow:
+  0 10px 25px rgba(0,0,0,.08);
+}
+
+/* ==========================
+   DOCTOR
+========================== */
+
+.doctor-container{
+  position:absolute;
+
+  top:20px;
+  left:30px;
+
+  width:100%;
+  height:560px;
+
+  display:flex;
+  justify-content:flex-start;
+  align-items:flex-end;
+
+  z-index:3;
+}
+.doctor-image{
+  width:120%;
+  max-width:575px;
+  height:auto;
+
+  transform:translateY(115px);
+}
+/* ==========================
+   BANNER INFERIOR
+========================== */
+
+.info-banner{
+  position:absolute;
+
+  bottom:0;
+  left:0;
+
+  width:100%;
+  height:170px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #2441b8,
+      #7046c9
+    );
+
+  color:white;
+
+  display:flex;
+  align-items:center;
+  gap:25px;
+
+  padding:35px;
+
+  z-index:2;
+}
+
+.info-banner::before{
+  content:"";
+
+  position:absolute;
+
+  left:-120px;
+  top:0;
+
+  width:90px;
+  height:100%;
+
+  background:#19d3c5;
+
+  transform:skewX(-18deg);
+}
+
+.shield-icon{
+  font-size:55px;
+  color:#19d3c5;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  min-width:70px;
+}
+
+.info-banner h3{
+  font-size:26px;
+  font-weight:700;
+  line-height:1.2;
+  color:white;
+
+  margin-bottom:10px;
+}
+
+.info-banner p{
+  color:rgba(255,255,255,.92);
+
+  font-size:16px;
+
+  line-height:1.6;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:1200px){
+
+  .login-card-v2{
+      width:95%;
+      height:auto;
+      min-height:700px;
+  }
+
+}
+
+@media(max-width:992px){
+
+  .login-card-v2{
+      flex-direction:column;
+      height:auto;
+  }
+
+  .login-left,
+  .login-right{
+      width:100%;
+  }
+
+  .login-left::after{
+  z-index:1;
+}
+
+  .doctor-container{
+      position:relative;
+      top:auto;
+      left:auto;
+      right:auto;
+      margin-top:40px;
+  }
+
+  .info-banner{
+      position:relative;
+  }
+
+  .top-logo img{
+  width:clamp(180px,18vw,360px);
+}
+
+}
+
+.btn-login-v2{
+  display:block;
+  width:100%;
+}
+
+.authorized-card{
+  width:100%;
+  margin-top:5px;
+  flex-shrink:0;
+}
+
+/* ==========================
+   LAPTOPS PEQUEÑAS
+========================== */
+
+@media (max-width: 1366px){
+
+  .login-card-v2{
+    width:95vw;
+    min-height:700px;
+  }
+
+  .doctor-image{
+    max-width:320px;
+  }
+
+  .login-header-v2 h1{
+    font-size:46px;
+  }
+
+}
+
+/* ==========================
+   TABLETS
+========================== */
+
+@media (max-width: 992px){
+
+  .login-card-v2{
+    flex-direction:column;
+  }
+
+  .login-left,
+  .login-right{
+    width:100%;
+  }
+
+}
+
+.register-link-login{
+  margin-top: 18px;
+  text-align: center;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.register-link-login a{
+  color: #0ea5e9;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.register-link-login a:hover{
+  text-decoration: underline;
+}
