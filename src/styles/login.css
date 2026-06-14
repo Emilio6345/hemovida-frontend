@@ -596,106 +596,77 @@ background-position-y: -388px;
   text-decoration: underline;
 }
 
-/* ==========================
-   MOVIL
-========================== */
+/* =====================================
+   MOBILE KEEP DESKTOP LAYOUT
+===================================== */
 
 @media (max-width: 768px){
 
-  .top-logo{
-    top:10px;
-    left:10px;
-  }
-
-  .top-logo img{
-    width:140px;
-  }
-
   .login-page{
-    padding:80px 15px 20px;
-    align-items:flex-start;
+    padding:15px;
+    overflow-x:hidden;
   }
 
   .login-card-v2{
     width:100%;
-    min-height:auto;
-    border-radius:28px;
-    overflow:hidden;
+    max-width:100%;
+    min-height:650px;
+
     display:flex;
-    flex-direction:column;
+    flex-direction:row !important;
   }
 
   .login-left{
-    width:100%;
-    padding:35px 25px;
-  }
-
-  .login-left::after{
-    display:none;
-  }
-
-  .login-right{
-    width:100%;
-    height:420px;
-    display:block;
-    position:relative;
-  }
-
-  .login-header-v2 h1{
-    font-size:60px;
-  }
-
-  .login-header-v2 p{
-    font-size:18px;
-  }
-
-  .input-box input{
-    height:65px;
-    font-size:18px;
-  }
-
-  .btn-login-v2{
-    height:65px;
-    font-size:22px;
-  }
-
-  .doctor-container{
-    position:absolute;
-    left:0;
-    right:0;
-    bottom:90px;
-    display:flex;
-    justify-content:center;
-    align-items:flex-end;
-  }
-
-  .doctor-image{
-    width:280px;
-    max-width:80%;
-    transform:none;
-  }
-
-  .info-banner{
-    position:absolute;
-    bottom:0;
-    left:0;
-    width:100%;
-    height:auto;
+    width:55%;
     padding:20px;
   }
 
-  .info-banner h3{
-    font-size:22px;
+  .login-right{
+    width:45%;
+    display:block;
   }
 
-  .info-banner p{
+  .login-header-v2 h1{
+    font-size:42px;
+  }
+
+  .login-header-v2 p{
+    font-size:15px;
+  }
+
+  .input-box input{
+    height:55px;
     font-size:14px;
   }
 
-  .language-selector{
-    top:15px;
-    right:15px;
-    padding:10px 14px;
+  .btn-login-v2{
+    height:55px;
+    font-size:16px;
   }
 
+  .doctor-image{
+    max-width:240px;
+    width:100%;
+  }
+
+  .info-banner{
+    padding:15px;
+  }
+
+  .info-banner h3{
+    font-size:18px;
+  }
+
+  .info-banner p{
+    font-size:12px;
+  }
+
+  .language-selector{
+    padding:8px 12px;
+    font-size:12px;
+  }
+
+  .top-logo img{
+    width:120px;
+  }
 }
