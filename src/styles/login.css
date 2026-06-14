@@ -552,7 +552,7 @@ background-position-y: -388px;
 @media (max-width:768px){
 
   .login-page{
-    padding:25px;
+    padding:20px;
 
     background-size:cover !important;
     background-position:center !important;
@@ -562,29 +562,29 @@ background-position-y: -388px;
   }
 
   .top-logo{
-    top:60px;
+    top:40px;
     left:50%;
     transform:translateX(-50%);
   }
 
   .top-logo img{
-    width:230px;
+    width:180px;
   }
 
   .login-card-v2{
 
     width:100%;
-    max-width:720px;
+    max-width:760px;
 
     display:flex;
     flex-direction:row;
 
-    background:rgba(255,255,255,.35);
+    background:rgba(255,255,255,.28);
 
     backdrop-filter:blur(12px);
     -webkit-backdrop-filter:blur(12px);
 
-    border:1px solid rgba(255,255,255,.4);
+    border:1px solid rgba(255,255,255,.35);
 
     border-radius:30px;
 
@@ -595,21 +595,24 @@ background-position-y: -388px;
     min-height:auto;
   }
 
+  /* MÁS ANCHO */
   .login-left{
-    width:62%;
+    width:72%;
 
     background:transparent;
 
-    padding:30px 22px;
+    padding:30px;
   }
 
   .login-left::after{
     display:none;
   }
 
+  /* MÁS ANGOSTO */
   .login-right{
-    width:38%;
+    width:28%;
     background:transparent;
+    position:relative;
   }
 
   .login-header-v2{
@@ -617,16 +620,18 @@ background-position-y: -388px;
   }
 
   .login-header-v2 h1{
-    font-size:42px;
+    font-size:58px;
+    line-height:1;
+    margin-bottom:15px;
   }
 
   .login-header-v2 p{
-    font-size:16px;
+    font-size:18px;
   }
 
   .input-box input{
     height:58px;
-    font-size:15px;
+    font-size:16px;
   }
 
   .btn-login-v2{
@@ -635,23 +640,24 @@ background-position-y: -388px;
   }
 
   .doctor-container{
-
     position:absolute;
 
-    right:-40px;
-    bottom:40px;
+    left:50%;
+    top:55%;
 
-    top:auto;
-    left:auto;
+    transform:translate(-50%,-50%);
 
     width:auto;
     height:auto;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
   }
 
   .doctor-image{
-    width:260px;
+    width:180px;
     max-width:none;
-
     transform:none;
   }
 
@@ -678,4 +684,4 @@ background-position-y: -388px;
   .info-banner{
     display:none;
   }
-} 
+}
