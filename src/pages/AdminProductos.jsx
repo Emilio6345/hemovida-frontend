@@ -31,9 +31,9 @@ const obtenerProductos = async () => {
 
 try {
 
-  const response = await fetch(
-    "http://localhost:3000/api/v1/productos"
-  );
+ const response = await fetch(
+  `${import.meta.env.VITE_API_URL}/productos`
+);
 
   const data = await response.json();
 
@@ -53,10 +53,9 @@ const obtenerCategorias = async () => {
 
 try {
 
-  const response = await fetch(
-    "http://localhost:3000/api/v1/categorias"
-  );
-
+ const response = await fetch(
+  `${import.meta.env.VITE_API_URL}/categorias`
+);
   const data = await response.json();
 
   setCategorias(data.categorias);
@@ -107,9 +106,10 @@ try {
   const token =
     localStorage.getItem("token");
 
-  const url = editando
-    ? `http://localhost:3000/api/v1/productos/${editando}`
-    : "http://localhost:3000/api/v1/productos";
+const url = editando
+  ? `${import.meta.env.VITE_API_URL}/productos/${editando}`
+  : `${import.meta.env.VITE_API_URL}/productos`;
+
 
   const metodo = editando
     ? "PUT"
@@ -218,20 +218,14 @@ try {
     localStorage.getItem("token");
 
   const response = await fetch(
-
-    `http://localhost:3000/api/v1/productos/desactivar/${id}`,
-
-    {
-
-      method: "PUT",
-
-      headers: {
-        Authorization: `Bearer ${token}`
-      }
-
+  `${import.meta.env.VITE_API_URL}/productos/desactivar/${id}`,
+  {
+    method: "PUT",
+    headers: {
+      Authorization: `Bearer ${token}`
     }
-
-  );
+  }
+);
 
   const data = await response.json();
 

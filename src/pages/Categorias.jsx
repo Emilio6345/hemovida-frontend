@@ -25,7 +25,7 @@ const categoriasPorPagina = 6;
       setLoading(true);
 
       const response = await fetch(
-        "http://localhost:3000/api/v1/categorias"
+        "import.meta.env.VITE_API_URL/categorias"
       );
 
       const data = await response.json();
@@ -107,7 +107,7 @@ const categoriasPorPagina = 6;
 
     try {
       const response = await fetch(
-        "http://localhost:3000/api/v1/categorias",
+        "import.meta.env.VITE_API_URL/categorias",
         {
           method: "POST",
           headers: {
@@ -152,7 +152,7 @@ const categoriasPorPagina = 6;
 
     try {
       const response = await fetch(
-        `http://localhost:3000/api/v1/categorias/${id}`,
+        `import.meta.env.VITE_API_URL/categorias/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -202,7 +202,7 @@ const handleEditar = async (categoria) => {
 
   try {
     const response = await fetch(
-      `http://localhost:3000/api/v1/categorias/${categoria.id}`,
+      `import.meta.env.VITE_API_URL/categorias/${categoria.id}`,
       {
         method: "PUT",
         headers: {

@@ -21,7 +21,7 @@ const productsPerPage = 6;
 
             const response = await fetch( // fetch es una función nativa de JavaScript que se utiliza para hacer 
             // solicitudes HTTP a un servidor, en este caso, se hace una solicitud GET a la URL
-                "http://localhost:3000/api/v1/productos"
+                "import.meta.env.VITE_API_URL/productos"
             );
 
             console.log("Status:", response.status);

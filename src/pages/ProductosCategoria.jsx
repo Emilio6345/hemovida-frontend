@@ -18,7 +18,7 @@ export const ProductosCategoria = () => {
         try {
 
             const response = await fetch(
-                `http://localhost:3000/api/v1/categorias/${id}/productos`
+                `import.meta.env.VITE_API_URL/categorias/${id}/productos`
             );
 
             const data = await response.json();

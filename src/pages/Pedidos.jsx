@@ -21,7 +21,7 @@ export const Pedidos = () => {
       const token = localStorage.getItem("token");
 
 const response = await fetch(
-  "http://localhost:3000/api/v1/pedidos",
+  "import.meta.env.VITE_API_URL/pedidos",
   {
     headers: {
       Authorization: `Bearer ${token}`
@@ -59,7 +59,7 @@ const response = await fetch(
       if (!result.isConfirmed) return;
 
       const response = await fetch(
-        `http://localhost:3000/api/v1/pedidos/${id}`,
+        `import.meta.env.VITE_API_URL/pedidos/${id}`,
         {
           method: "DELETE",
         }
