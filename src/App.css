@@ -1176,3 +1176,30 @@ body {
 .register-link:hover{
     transform:translateY(-2px);
 }
+
+html,
+body{
+  overflow-x:hidden;
+  width:100%;
+}
+
+@media (max-width:768px){
+
+  .footer-grid{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .footer-bottom{
+    flex-direction:column;
+    gap:15px;
+    text-align:center;
+  }
+
+  .footer-brand-image{
+    width:250px;
+    left:0;
+    top:0;
+  }
+
+}
