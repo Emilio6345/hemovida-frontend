@@ -45,15 +45,15 @@ export const Login = () => {
       setLoading(true);
 
       const response = await fetch(
-        "http://localhost:3000/api/v1/auth/login",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
+  `${import.meta.env.VITE_API_URL}/auth/login`,
+  {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formData),
+  }
+);
 
       const data = await response.json();
 
