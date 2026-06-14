@@ -21,7 +21,7 @@ export const ProductDetail = () => {
     try {
 
       const response = await fetch(
-        `import.meta.env.VITE_API_URL/productos/${id}`
+       `${import.meta.env.VITE_API_URL}/productos/${id}`
       );
 
       const data = await response.json();

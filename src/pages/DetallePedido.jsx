@@ -16,7 +16,7 @@ const DetallePedido = () => {
   const obtenerDetalle = async () => {
     try {
       const response = await fetch(
-        `import.meta.env.VITE_API_URL/pedidos/detalle/${id}`
+        `${import.meta.env.VITE_API_URL}/pedidos/detalle/${id}`
       );
 
       if (!response.ok) {

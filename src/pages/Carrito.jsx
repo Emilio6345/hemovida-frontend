@@ -77,7 +77,7 @@ console.log("IMAGEN:", carrito[0]?.image);
         return;
       }
 
-      const res = await fetch("${import.meta.env.VITE_API_URL}/pedidos/", {
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/pedidos/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

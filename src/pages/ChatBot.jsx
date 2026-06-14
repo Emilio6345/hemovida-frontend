@@ -22,7 +22,7 @@ export default function ChatBot() {
 
     try {
       const res = await fetch(
-        "import.meta.env.VITE_API_URL/bot/generate",
+        `${import.meta.env.VITE_API_URL}/bot/generate`,
         {
           method: "POST",
           headers: {
