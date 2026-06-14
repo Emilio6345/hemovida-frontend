@@ -329,7 +329,7 @@ body{
 .secure-text{
   text-align:center;
 
-  margin-top:70px;
+  margin-top:20px;
 
   color:#94a3b8;
 
@@ -596,67 +596,43 @@ background-position-y: -388px;
   text-decoration: underline;
 }
 
-/* ==================================================
-   LOGIN RESPONSIVE FIX - HEMOVIDA
-================================================== */
+/* ==========================================
+   LOGIN MOBILE FIX DEFINITIVO
+========================================== */
 
-/* TABLETS GRANDES */
-@media (max-width: 1024px){
-
-  .login-page{
-    padding:20px;
-  }
-
-  .login-card-v2{
-    width:100%;
-    min-height:auto;
-  }
-
-  .login-left{
-    padding:40px;
-  }
-
-  .login-header-v2 h1{
-    font-size:38px;
-  }
-
-  .doctor-image{
-    max-width:380px;
-    transform:translateY(40px);
-  }
-
-}
-
-/* TABLETS */
 @media (max-width: 768px){
 
   .login-page{
-    padding:15px;
+    padding:20px;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
   }
 
   .top-logo{
-    position:relative;
-    top:auto;
-    left:auto;
-    margin-bottom:20px;
+    display:none;
   }
 
   .login-card-v2{
-    flex-direction:column;
-    border-radius:25px;
-  }
-
-  .login-left,
-  .login-right{
     width:100%;
+    max-width:500px;
+    min-height:auto;
+    border-radius:24px;
   }
 
   .login-left{
-    padding:30px 20px;
+    width:100%;
+    padding:30px 22px;
   }
 
   .login-left::after{
     display:none;
+  }
+
+  /* OCULTAR PANEL DERECHO COMPLETO */
+  .login-right{
+    display:none !important;
   }
 
   .login-header-v2{
@@ -664,7 +640,7 @@ background-position-y: -388px;
   }
 
   .login-header-v2 h1{
-    font-size:32px;
+    font-size:34px;
   }
 
   .login-header-v2 p{
@@ -672,9 +648,9 @@ background-position-y: -388px;
   }
 
   .input-box input{
-    height:58px;
+    height:56px;
     font-size:15px;
-    padding-left:55px;
+    padding-left:52px;
   }
 
   .icon{
@@ -682,141 +658,28 @@ background-position-y: -388px;
     font-size:18px;
   }
 
-  .btn-login-v2{
-    height:58px;
-    font-size:18px;
-  }
-
-  .authorized-card{
-    height:58px;
-    font-size:15px;
-  }
-
-  .login-right{
-    min-height:450px;
-
-    background-size:cover;
-    background-position:center;
-  }
-
-  .doctor-container{
-    justify-content:center;
-    height:auto;
-    margin-top:20px;
-  }
-
-  .doctor-image{
-    width:80%;
-    max-width:320px;
-    transform:none;
-  }
-
-  .info-banner{
-    height:auto;
-    flex-direction:column;
-    text-align:center;
-    padding:25px;
-    gap:15px;
-  }
-
-  .info-banner::before{
-    display:none;
-  }
-
-  .info-banner h3{
-    font-size:22px;
-  }
-
-  .info-banner p{
-    font-size:14px;
-  }
-
-}
-
-/* CELULARES */
-@media (max-width: 480px){
-
-  .login-page{
-    padding:10px;
-  }
-
-  .login-card-v2{
-    border-radius:20px;
-  }
-
-  .login-left{
-    padding:25px 15px;
-  }
-
-  .login-header-v2 h1{
-    font-size:28px;
-  }
-
-  .login-header-v2 p{
-    font-size:14px;
-  }
-
-  .input-box{
-    margin-bottom:18px;
-  }
-
-  .input-box input{
-    height:54px;
-    font-size:14px;
-    padding-left:50px;
-  }
-
-  .icon{
-    left:16px;
-    font-size:17px;
-  }
-
   .eye-btn{
     right:15px;
-    font-size:18px;
-  }
-
-  .forgot-row a{
-    font-size:14px;
   }
 
   .btn-login-v2{
-    height:54px;
-    font-size:16px;
+    height:56px;
+    font-size:18px;
   }
 
-  .authorized-card{
-    height:54px;
-    font-size:14px;
+  .separator{
+    margin:25px 0;
+  }
+
+  .shield-icon{
+    justify-content:center;
+    font-size:60px;
   }
 
   .secure-text{
-    margin-top:30px;
-    font-size:13px;
-  }
-
-  .language-selector{
-    top:15px;
-    right:15px;
-    padding:10px 14px;
-    font-size:13px;
-  }
-
-  .doctor-image{
-    width:90%;
-    max-width:260px;
-  }
-
-  .info-banner{
-    padding:20px;
-  }
-
-  .info-banner h3{
-    font-size:18px;
-  }
-
-  .info-banner p{
-    font-size:13px;
+    margin-top:15px;
+    text-align:center;
+    font-size:14px;
   }
 
 }
