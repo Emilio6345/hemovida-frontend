@@ -29,28 +29,21 @@ const productsPerPage = 6;
 
             console.log("DATA:", data);
 
-            setProducts(
+           setProducts(
 
-                data.productos.map(product => ({ //MAP se utiliza para transformar cada producto del arreglo 
-                // data.productos en un nuevo objeto con las propiedades id, name, description, price, stock, 
-                // image y onSale
+    data.map(product => ({
 
-                    id: product.id,
+        id: product.id,
+        name: product.nombre,
+        description: product.descripcion,
+        price: Number(product.precio),
+        stock: product.stock,
+        image: product.imagen,
+        onSale: false
 
-                    name: product.nombre,
+    }))
 
-                    description: product.descripcion,
-
-                    price: Number(product.precio),
-
-                    stock: product.stock,
-
-                    image: product.imagen,
-                    onSale: false  // Ejemplo de lógica para determinar si el producto está en oferta
-
-                }))
-
-            );
+);
 
         } catch(error){
 
