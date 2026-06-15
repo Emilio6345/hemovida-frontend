@@ -1246,7 +1246,7 @@ body{
    modificado 
 ========================================== */
 
-@media (min-width: 993px){
+@media (min-width: 769px){
 
   .mobile-toggle{
     display:none !important;
@@ -1291,11 +1291,10 @@ body{
 }
 
 /* Mobile */
-/*
-@media (max-width: 992px){
+@media (max-width: 768px){
 
   .mobile-toggle{
-    display:flex !important;
+    display:flex;
     align-items:center;
     justify-content:center;
   }
@@ -1318,53 +1317,30 @@ body{
   }
 
   .register-btn{
-    display:none !important;
+    display:none;
   }
-}
 
-.products-view{
-  width:100%;
-  max-width:1400px;
-  margin:0 auto;
-  padding:20px;
 }
-
-*/
-/* ===== FIX DESKTOP ===== */
+/* FIX DESKTOP */
 
 .nav-links{
-  display:flex !important;
-  flex-direction:row !important;
-  align-items:center !important;
-}
-
-.nav-container{
-  display:flex !important;
-  justify-content:space-between !important;
-  align-items:center !important;
+  display:flex;
+  align-items:center;
+  gap:1.5rem;
 }
 
 .mobile-toggle{
-  display:none !important;
+  display:none;
 }
 
-.main-content{
-  width:100%;
-}
+@media (min-width:769px){
 
-.container-products{
-  width:100%;
-  display:grid !important;
+  .nav-links{
+    display:flex !important;
+    flex-direction:row !important;
+    position:static !important;
+    width:auto !important;
+    background:transparent !important;
+  }
 
-  grid-template-columns:
-  repeat(3, minmax(320px,1fr)) !important;
-
-  gap:28px !important;
-}
-
-.products-view{
-  width:100%;
-  max-width:1400px;
-  margin:0 auto;
-  padding:20px;
 }
