@@ -212,17 +212,15 @@ margin-right:-50vw;
   background:
     linear-gradient(
       90deg,
-      #07132d 0%,
-      #07132d 40%,
-      rgba(7,19,45,0.95) 55%,
-      rgba(7,19,45,0.7) 65%,
-      rgba(7,19,45,0.25) 80%,
-      transparent 100%
+      rgba(7,19,45,.98) 0%,
+      rgba(7,19,45,.95) 35%,
+      rgba(7,19,45,.78) 55%,
+      rgba(7,19,45,.35) 72%,
+      rgba(7,19,45,.05) 100%
     );
 
   z-index: 1;
 }
-
 /* SECTION 1: Why Hemovida? */
 .why-grid {
   display: grid;
@@ -1119,7 +1117,7 @@ margin-right:-50vw;
 }
 
 /* Mobile Adjustments */
-@media (max-width: 768px) {
+@media (max-width:768px){
 
   .medical-hero-premium{
     flex-direction: column;
@@ -1128,14 +1126,24 @@ margin-right:-50vw;
 
   .hero-content-premium{
     width: 100%;
-    padding: 2rem;
+    padding: 40px 24px;
     text-align: center;
   }
 
   .hero-image-premium{
+    position: relative;
     width: 100%;
     height: 260px;
   }
+
+}
+
+.hero-image-premium img{
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
 
   .medical-hero-premium::after{
     display:none;
@@ -1145,7 +1153,6 @@ margin-right:-50vw;
     font-size: 2.5rem;
   }
 
-}
 
 .specialties-slider {
   display: flex;
