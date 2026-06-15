@@ -829,14 +829,15 @@ body {
 }
 
 .footer-container {
-  width: 96%;
-  max-width: 2000px;
+  width: 100%;
+  max-width: 1400px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 .footer-grid{
     display:grid;
-    grid-template-columns:650px repeat(4,1fr);
-    gap:50px;
+    grid-template-columns:repeat(5,1fr);
+    gap:40px;
     align-items:start;
 }
 .footer-logo-wrapper {
@@ -930,12 +931,9 @@ body {
 
 .footer-brand-image{
     width:100%;
-    max-width:300px;
+    max-width:220px;
     height:auto;
     display:block;
-    position:relative;
-    left:-40px;
-    top: -100px;
 }
 
 .services-toolbar {
@@ -1188,4 +1186,15 @@ body{
     top:0;
   }
 
+}
+*{
+  max-width:100%;
+}
+
+img{
+  max-width:100%;
+}
+
+.main-content{
+  overflow:hidden;
 }
