@@ -22,7 +22,6 @@
   overflow-x: hidden;
   background-color: var(--white);
   color: var(--text-dark);
-  margin-top: -2.5rem; /* Offset MainLayout padding */
 }
 
 /* Reusable Components */
@@ -71,17 +70,11 @@ margin-right:-50vw;
 */
 
 .premium-section {
-  padding: clamp(60px, 10vw, 120px) 0;
+  padding: clamp(60px, 10vw, 120px) 20px;
 
-  width: 100vw;
+  width: 100%;
 
   position: relative;
-
-  left: 50%;
-  right: 50%;
-
-  margin-left: -50vw;
-  margin-right: -50vw;
 
   overflow: hidden;
 

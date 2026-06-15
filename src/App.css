@@ -310,16 +310,20 @@ body {
    PRODUCT CARDS & GRIDS
    ============================================================ */
 
-.container-products {
-  max-width: 1280px;
-  margin: 0 auto;
+.container-products{
+  width:100%;
+  max-width:1280px;
 
-  display: grid;
+  margin:0 auto;
+
+  display:grid;
 
   grid-template-columns:
-    repeat(3, minmax(320px, 1fr));
+    repeat(auto-fit,minmax(320px,1fr));
 
-  gap: 28px;
+  gap:28px;
+
+  padding:20px;
 }
 
 .product-card {
@@ -1317,6 +1321,9 @@ body{
   }
 }
 
-*{
-  outline:1px solid red;
+.products-view{
+  width:100%;
+  max-width:1400px;
+  margin:0 auto;
+  padding:20px;
 }
