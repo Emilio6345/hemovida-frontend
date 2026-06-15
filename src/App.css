@@ -1291,6 +1291,7 @@ body{
 }
 
 /* Mobile */
+/*
 @media (max-width: 992px){
 
   .mobile-toggle{
@@ -1319,6 +1320,46 @@ body{
   .register-btn{
     display:none !important;
   }
+}
+
+.products-view{
+  width:100%;
+  max-width:1400px;
+  margin:0 auto;
+  padding:20px;
+}
+
+*/
+/* ===== FIX DESKTOP ===== */
+
+.nav-links{
+  display:flex !important;
+  flex-direction:row !important;
+  align-items:center !important;
+}
+
+.nav-container{
+  display:flex !important;
+  justify-content:space-between !important;
+  align-items:center !important;
+}
+
+.mobile-toggle{
+  display:none !important;
+}
+
+.main-content{
+  width:100%;
+}
+
+.container-products{
+  width:100%;
+  display:grid !important;
+
+  grid-template-columns:
+  repeat(3, minmax(320px,1fr)) !important;
+
+  gap:28px !important;
 }
 
 .products-view{
