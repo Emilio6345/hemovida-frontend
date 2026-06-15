@@ -596,7 +596,7 @@ background-position-y: -388px;
   }
 
   .login-left{
-    width:80%;
+    width:100%;
     padding:22px 18px;
     background:transparent;
   }
@@ -606,7 +606,7 @@ background-position-y: -388px;
   }
 
   .login-right{
-    width:20%;
+    width:40%;
     background:transparent;
     position:relative;
   }
@@ -617,7 +617,7 @@ background-position-y: -388px;
   }
 
   .login-header-v2 h1{
-    font-size:40px;
+    font-size:60px;
     line-height:1.1;
     margin-bottom:8px;
   }
