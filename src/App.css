@@ -169,6 +169,9 @@ body {
 .main-content {
   flex: 1;
   width: 100%;
+  position:relative;
+  z-index:1;
+
 }
 
 /* View Header Patterns */
@@ -801,32 +804,6 @@ body {
   color:var(--text-main);
 }
 
-.mobile-toggle{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-  }
-
-  .nav-links{
-    display:none;
-    position:absolute;
-    top:80px;
-    left:0;
-    width:100%;
-    background:white;
-    flex-direction:column;
-    padding:20px;
-    border-bottom:1px solid #e5e7eb;
-    z-index:999;
-  }
-
-  .nav-links.open{
-    display:flex;
-  }
-
-  .register-btn{
-    display:none;
-  }
 
 .cart-product-image{
     width:100%;
@@ -948,7 +925,8 @@ body {
 
 
 .footer-brand-image{
-    width:300%;
+    width:100%;
+    max-width:300px;
     height:auto;
     display:block;
     position:relative;
@@ -1337,4 +1315,8 @@ body{
   .register-btn{
     display:none !important;
   }
+}
+
+*{
+  outline:1px solid red;
 }
