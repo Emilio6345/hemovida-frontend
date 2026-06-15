@@ -15,6 +15,7 @@ const productsPerPage = 6;
         //  se ejecuta solo una vez al cargar el componente
     }, []);
 
+
     const fetchProducts = async () => {
 
         try {
@@ -29,9 +30,9 @@ const productsPerPage = 6;
 
             console.log("DATA:", data);
 
-           setProducts(
+        setProducts(
 
-    data.map(product => ({
+    data.productos.map(product => ({
 
         id: product.id,
         name: product.nombre,
