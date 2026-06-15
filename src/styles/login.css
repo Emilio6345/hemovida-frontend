@@ -571,29 +571,30 @@ background-position-y: -388px;
     width:180px;
   }
 
-  .login-card-v2{
+    .login-card-v2{
 
-    width:100%;
-    max-width:640px;
+      width:100%;
+      max-width:640px;
 
-    display:flex;
-    flex-direction:row;
+      display:flex;
+      flex-direction:row;
 
-    background:rgba(255,255,255,.28);
+      background:rgba(255,255,255,.28);
 
-    backdrop-filter:blur(10px);
-    -webkit-backdrop-filter:blur(10px);
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
 
-    border:1px solid rgba(255,255,255,.35);
+      border:1px solid rgba(255,255,255,.35);
 
-    border-radius:28px;
+      border-radius:28px;
 
-    overflow:hidden;
+      overflow:hidden;
 
-    margin-top:90px;
+      margin-top:0;
+transform:translateY(-40px);
 
-    min-height:auto;
-  }
+      min-height:auto;
+    }
 
   .login-left{
     width:100%;
