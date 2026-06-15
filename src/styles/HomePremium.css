@@ -185,9 +185,17 @@ margin-right:-50vw;
 }
 
 .hero-content-premium{
-    width:100%;
-    padding:30px 20px;
-  }
+  position: relative;
+  z-index: 2;
+
+  width: 55%;
+
+  padding: 60px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .hero-content-premium p {
   color: rgba(255,255,255,0.9);
@@ -198,10 +206,31 @@ margin-right:-50vw;
 }
 
  .hero-image-premium{
-    position:relative;
-    width:100%;
-    height:250px;
-  }
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 52%;
+  height: 100%;
+
+  z-index: 0;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image-premium img{
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  opacity: .95;
+}
 
 .medical-hero-premium::after {
   content: "";
@@ -1122,38 +1151,24 @@ margin-right:-50vw;
   .medical-hero-premium{
     flex-direction: column;
     min-height: auto;
+
+    padding: 0;
   }
 
   .hero-content-premium{
     width: 100%;
-    padding: 40px 24px;
+    padding: 40px 25px;
     text-align: center;
   }
 
   .hero-image-premium{
     position: relative;
+
     width: 100%;
     height: 260px;
   }
 
 }
-
-.hero-image-premium img{
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-}
-
-  .medical-hero-premium::after{
-    display:none;
-  }
-
-  .hero-content-premium h1{
-    font-size: 2.5rem;
-  }
-
-
 .specialties-slider {
   display: flex;
   gap: 30px;
