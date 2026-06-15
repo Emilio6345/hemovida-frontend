@@ -30,20 +30,18 @@ const productsPerPage = 6;
 
             console.log("DATA:", data);
 
-        setProducts(
+            console.log(Array.isArray(data.productos));
 
-    data.productos.map(product => ({
-
-        id: product.id,
-        name: product.nombre,
-        description: product.descripcion,
-        price: Number(product.precio),
-        stock: product.stock,
-        image: product.imagen,
-        onSale: false
-
-    }))
-
+       setProducts(
+  (data.productos || []).map(product => ({
+    id: product.id,
+    name: product.nombre,
+    description: product.descripcion,
+    price: Number(product.precio),
+    stock: product.stock,
+    image: product.imagen,
+    onSale: false
+  }))
 );
 
         } catch(error){
